@@ -22,4 +22,27 @@ describe('rework-namespace', function() {
         assert.equal(actual, expected, 'Output should match expected namespaced result');
     });
 
+    it('should not add namespace by default', function() {
+        var actual = rework(read('test/fixtures/namespace.fixture.css', 'utf8'))
+            .use(namespace())
+            .toString()
+            .trim(),
+            expected = read('test/expected/no.namespace.expected.css', 'utf8')
+                .toString()
+                .trim();
+
+        assert.equal(actual, expected, 'Output should match expected namespaced result');
+    });
+
+    it('should not add namespace by if empty string is passed as argument', function() {
+        var actual = rework(read('test/fixtures/namespace.fixture.css', 'utf8'))
+            .use(namespace(''))
+            .toString()
+            .trim(),
+            expected = read('test/expected/no.namespace.expected.css', 'utf8')
+                .toString()
+                .trim();
+
+        assert.equal(actual, expected, 'Output should match expected namespaced result');
+    });
 });

@@ -19,7 +19,8 @@ module.exports = function(str) {
         style.rules = style.rules.map(function(rule) {
             if (!rule.selectors) return rule;
             rule.selectors = rule.selectors.map(function(selector) {
-                return (selector.charAt(0) == '.' ? "." + str + "-" + selector.substr(1) : selector);
+                if (!str || str === '') return selector;
+                return (selector.charAt(0) === '.' ? '.' + str + '-' + selector.substr(1) : selector);
             });
             return rule;
         });
