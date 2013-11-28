@@ -1,0 +1,32 @@
+{
+  "name": "rework-namespace",
+  "version": "0.0.0",
+  "description": "Namespace plugin for rework",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kristoferjoseph/rework-namespace.git"
+  },
+  "keywords": [
+    "css",
+    "rework",
+    "namespace"
+  ],
+  "author": "@dam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kristoferjoseph/rework-namespace/issues"
+  },
+  "homepage": "https://github.com/kristoferjoseph/rework-namespace",
+  "devDependencies": {
+    "grunt-simple-mocha": "~0.4.0",
+    "mkdirp": "~0.3.5",
+    "fs-extra": "~0.8.1"
+  }
+}
