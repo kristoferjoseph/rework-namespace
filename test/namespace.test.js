@@ -45,4 +45,17 @@ describe('rework-namespace', function() {
 
         assert.equal(actual, expected, 'Output should match expected namespaced result');
     });
+
+    it('should add namespace to compound selector', function() {
+        var actual = rework(read('test/fixtures/compound.selector.fixture.css', 'utf8'))
+            .use(namespace('dam'))
+            .toString()
+            .trim(),
+            expected = read('test/expected/compound.selector.expected.css', 'utf8')
+                .toString()
+                .trim();
+
+        assert.equal(actual, expected, 'Output should match expected namespaced result on a compound selector');
+    });
+
 });

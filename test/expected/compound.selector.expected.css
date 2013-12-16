@@ -1,0 +1,3 @@
+input[type="checkbox"]:checked > .dam-checkmark__label {
+  background-color: blue;
+}
