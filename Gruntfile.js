@@ -4,10 +4,6 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
         simplemocha: {
-            options: {
-                ui: 'bdd',
-                reporter: 'nyan'
-            },
             all: {
                 src: ['test/*.test.js']
             }
