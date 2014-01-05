@@ -20,7 +20,9 @@ module.exports = function(str) {
             if (!rule.selectors) return rule;
             rule.selectors = rule.selectors.map(function(selector) {
                 if (!str || str === '') return selector;
-                return selector.replace(/[.]/g, '.' + str + '-');
+                return selector
+                  .replace(/[.]/g, '.' + str)
+                  .replace(/[#]/g, '#' + str);
             });
             return rule;
         });

@@ -2,6 +2,10 @@
   color: black;
 }
 
+#button {
+  color: blue;
+}
+
 button {
   color: red;
 }
