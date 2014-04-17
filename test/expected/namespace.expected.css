@@ -1,8 +1,11 @@
-.dam-button {
+.dam_button {
   color: black;
+}
+
+#dam_button {
+  color: blue;
 }
 
 button {
   color: red;
 }
-
