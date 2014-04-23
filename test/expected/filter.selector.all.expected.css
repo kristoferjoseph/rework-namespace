@@ -1,0 +1,19 @@
+.s-button {
+  color: black;
+}
+
+.s-toolbar-button {
+  color: blue;
+}
+
+.s-icon {
+  color: white;
+}
+
+.s-icon-triangle-up:before {
+  content: '\25B2';
+}
+
+.s-icon-triangle-down:before {
+  content: '\25BC';
+}
