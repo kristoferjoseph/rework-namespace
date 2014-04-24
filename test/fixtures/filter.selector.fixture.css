@@ -1,0 +1,19 @@
+.button {
+  color: black;
+}
+
+.toolbar-button {
+  color: blue;
+}
+
+.icon {
+  color: white;
+}
+
+.icon-triangle-up:before {
+  content: '\25B2';
+}
+
+.icon-triangle-down:before {
+  content: '\25BC';
+}
