@@ -1,0 +1,17 @@
+.dam-button {
+  color: black;
+}
+
+button {
+  color: red;
+}
+
+@media only screen and (min-width: 48em) {
+  .dam-button {
+    color: blue;
+  }
+
+  button {
+    color: green;
+  }
+}

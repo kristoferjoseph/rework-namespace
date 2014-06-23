@@ -34,6 +34,18 @@ describe('rework-namespace', function() {
         assert.equal(actual, expected, 'Output should match expected namespaced result');
     });
 
+    it('should add the namespace to selectors inside of mediaqueries.', function() {
+        var actual = rework(read('test/fixtures/mediaquery.fixture.css', 'utf8'))
+            .use(namespace('dam'))
+            .toString()
+            .trim(),
+            expected = read('test/expected/mediaquery.expected.css', 'utf8')
+                .toString()
+                .trim();
+
+        assert.equal(actual, expected, 'Output should match expected namespaced result');
+    });
+
     it('should not add namespace by if empty string is passed as argument', function() {
         var actual = rework(read('test/fixtures/namespace.fixture.css', 'utf8'))
             .use(namespace(''))
