@@ -52,12 +52,18 @@ module.exports = function(ns, options) {
         return selectorMatchesTests(selector, options.not, false);
     }
 
-    return function(style) {
+    return function replace(style) {
         // Do nothing if namespace was not specified
         if (!ns || ns === '') return;
 
         style.rules = style.rules.map(function(rule) {
+            if (rule && rule.type === 'media') {
+              replace(rule);
+              return rule;
+            }
+
             if (!rule.selectors) return rule;
+
             rule.selectors = rule.selectors.map(function(selector) {
                 if (shouldIgnoreSelector(selector) || !shouldIncludeSelector(selector)) return selector;
                 return selector.replace(/\./g, '.' + ns + '-');
